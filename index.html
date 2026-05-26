@@ -7,16 +7,31 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #2C3A47, #8E9AA6); 
-      min-height: 100vh;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      text-align: center;
+  background: linear-gradient(-45deg, #8E9AA6, #F4F0EA, #5F6B5E, #2C3A47);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
     }
+    
+    @keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
     h1 {
       font-size: 2rem;
