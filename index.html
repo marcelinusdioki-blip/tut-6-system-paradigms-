@@ -33,6 +33,45 @@
   }
 }
 
+    .snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Allows clicks to pass through the snow */
+  z-index: 9999; /* Keeps the snow on top of the background */
+  overflow: hidden;
+}
+
+/* Base style for individual snowflakes */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  /* Uses CSS animation to fall down and sway side to side */
+  animation: fall linear infinite, sway ease-in-out infinite;
+}
+
+/* The vertical falling motion */
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
+
+/* The horizontal swaying motion to look like natural wind */
+@keyframes sway {
+  0%, 100% {
+    margin-left: 0px;
+  }
+  50% {
+    margin-left: 50px;
+  }
+}
+
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
